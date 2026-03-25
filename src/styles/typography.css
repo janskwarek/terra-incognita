@@ -1,0 +1,110 @@
+/* ============================================
+   TERRA INCOGNITA — Typography & Buttons
+   ============================================ */
+
+/* ── Section labels & titles ─────────────────── */
+.section-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.section-title em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-top: var(--space-sm);
+}
+
+/* ── Buttons ─────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition:
+    background var(--dur-fast) ease,
+    color     var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    transform var(--dur-fast) ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary — gold filled */
+.btn-primary {
+  color: var(--bg);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 15px 38px;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+/* Outline — transparent with gold border */
+.btn-outline {
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  padding: 15px 38px;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+/* Ghost — minimal, text only */
+.btn-ghost {
+  color: var(--cream-dim);
+  background: transparent;
+  border: none;
+  padding: 12px 0;
+}
+.btn-ghost:hover {
+  color: var(--gold);
+}
+
+/* Small size modifier */
+.btn-sm {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 10px 22px;
+}
+
+/* Large size modifier */
+.btn-lg {
+  font-size: 12px;
+  padding: 18px 48px;
+}

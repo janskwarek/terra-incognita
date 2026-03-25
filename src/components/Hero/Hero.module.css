@@ -1,0 +1,213 @@
+/* Hero.module.css */
+.hero {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ── Background ────────────────────────────── */
+.bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  will-change: transform;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 8s ease-out;
+  transform: scale(1.05);
+}
+
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+}
+
+/* Subtle grid overlay */
+.gridLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200, 169, 126, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 169, 126, 0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Film grain effect */
+.grain {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Ambient orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orb1 {
+  width: clamp(300px, 40vw, 520px);
+  height: clamp(300px, 40vw, 520px);
+  left: 5%;
+  top: 10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03), transparent 70%);
+  animation: orbFloat1 8s ease-in-out infinite alternate;
+}
+
+.orb2 {
+  width: clamp(250px, 35vw, 420px);
+  height: clamp(250px, 35vw, 420px);
+  right: 8%;
+  top: 35%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 70%);
+  animation: orbFloat2 10s ease-in-out infinite alternate;
+}
+
+.orb3 {
+  width: clamp(200px, 25vw, 320px);
+  height: clamp(200px, 25vw, 320px);
+  left: 40%;
+  bottom: 5%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02), transparent 70%);
+  animation: orbFloat3 12s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -40px) scale(1.15); }
+}
+@keyframes orbFloat2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-25px, 35px) scale(0.9); }
+}
+@keyframes orbFloat3 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(20px, 20px); }
+}
+
+/* ── Content ───────────────────────────────── */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 var(--section-px);
+  max-width: 1000px;
+}
+
+.preHeadline {
+  font-size: clamp(8px, 2vw, 10px);
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.01;
+  letter-spacing: -0.015em;
+  margin-bottom: 0;
+}
+
+.line {
+  display: block;
+  font-size: clamp(32px, 10vw, 128px);
+  color: var(--cream);
+}
+
+.italic {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(240, 235, 227, 0.5);
+  margin-top: 32px;
+  margin-bottom: 52px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Scroll indicator Circle ──────────────────────── */
+.scrollInd {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+}
+
+.circleText {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
+  fill: var(--gold);
+}
+
+.textPath {
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.arrowDown {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--cream);
+  animation: floatArrow 2s ease-in-out infinite;
+  margin-top: -2px;
+}
+
+@keyframes rotateText {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatArrow {
+  0%, 100% { transform: translateY(-4px); }
+  50% { transform: translateY(4px); }
+}
