@@ -1,0 +1,122 @@
+/* Footer.module.css */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 72px var(--section-px) 36px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+/* Brand column */
+.brand {
+  padding-right: 32px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 18px;
+  transition: color var(--dur-fast) ease;
+}
+.logo:hover {
+  color: var(--gold-light);
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(240, 235, 227, 0.38);
+  line-height: 1.8;
+}
+
+/* Link columns */
+.col { }
+
+.colTitle {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.colList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.colLink {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(240, 235, 227, 0.40);
+  text-decoration: none;
+  transition: color var(--dur-fast) ease;
+}
+.colLink:hover {
+  color: var(--gold);
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copy {
+  font-size: 12px;
+  color: rgba(240, 235, 227, 0.22);
+  letter-spacing: 0.04em;
+}
+
+.legal {
+  display: flex;
+  gap: 28px;
+}
+
+.legalLink {
+  font-size: 12px;
+  color: rgba(240, 235, 227, 0.25);
+  text-decoration: none;
+  transition: color var(--dur-fast) ease;
+}
+.legalLink:hover {
+  color: var(--gold);
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .brand {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

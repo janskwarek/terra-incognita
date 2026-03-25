@@ -1,0 +1,48 @@
+/* Stats.module.css */
+.bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  padding: 64px var(--section-px);
+
+  background: rgba(200, 169, 126, 0.04);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.num {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(240, 235, 227, 0.38);
+}
+
+@media (max-width: 768px) {
+  .bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
