@@ -10,20 +10,25 @@
 
 ## 📸 Główne Widoki (Screenshots)
 
-> [!TIP]
-> Poniżej znajdują się miejsca na Twoje zrzuty ekranu. Wklej pliki do folderu `/public/screenshots/` i zaktualizuj ścieżki poniżej.
+### 1. Widok startowy (Hero Slideshow)
+![Sekcja Hero — Widok Główny](./public/screenshots/hero-init.png)
+*Pierwsze wrażenie po wejściu na stronę – pełnoekranowy, kinowy pokaz slajdów z wysokiej rozdzielczości zdjęciami z Unsplash.*
 
-### 1. Sekcja Hero & Animated Slideshow
-![Sekcja Hero — Widok Główny](https://placehold.co/1200x600/000000/FFFFFF?text=Wklej+tutaj+zrzut+ekranu+sekcji+Hero)
-*Kinowe powiększenia zdjęć z Unsplash oraz dynamiczny "Curtain Reveal" podczas przewijania.*
+### 2. Efekt Kurtyny (Curtain Reveal)
+![Efekt Kurtyny](./public/screenshots/curtain-reveal.png)
+*Sztandarowy efekt wizualny aplikacji – panel z treścią płynnie najeżdżający na animowane tło, tworząc głębię 3D.*
 
-### 2. Katalog Destynacji
-![Lista Destynacji](https://placehold.co/1200x600/000000/FFFFFF?text=Wklej+tutaj+zrzut+ekranu+sekcji+Destynacji)
-*Przejrzysty układ kart z interaktywnymi hoverami i płynnym wsuwaniem się treści.*
+### 3. Katalog Destynacji
+![Lista Destynacji](./public/screenshots/destinations.png)
+*Przejrzysty układ kart z interaktywnymi hoverami, zaokrąglonymi rogami i kompletem danych o wycieczkach.*
 
-### 3. Mobilny System Nawigacji & Booking
-![Widok Mobilny i Formularz](https://placehold.co/1200x600/000000/FFFFFF?text=Wklej+tutaj+zrzut+ekranu+Mobile+i+Modal)
-*Responsywny hamburger menu oraz "pływający" formularz rezerwacyjny.*
+### 4. Flagowe Wycieczki
+![Flagowe Wycieczki](./public/screenshots/tours.png)
+*Prezentacja konkretnych programów wypraw z interaktywnymi mapami punktowymi i szczegółami trasy.*
+
+### 5. Responsywność Mobilna
+![Widok Mobilny](./public/screenshots/mobile-view.png)
+*Pełna optymalizacja dla urządzeń mobilnych – responsywny hamburger menu oraz płynna typografia.*
 
 ---
 
