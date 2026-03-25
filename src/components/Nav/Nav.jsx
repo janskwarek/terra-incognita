@@ -19,7 +19,6 @@ export default function Nav({ onBook }) {
         TERRA INCOGNITA
       </a>
 
-      {/* Hamburger icon for mobile */}
       <button 
         className={styles.hamburger} 
         onClick={() => setMenuOpen(!menuOpen)}
@@ -29,7 +28,6 @@ export default function Nav({ onBook }) {
         <span className={styles.bar}></span>
       </button>
 
-      {/* Links container */}
       <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ''}`}>
         <ul className={styles.links} role="list">
           {NAV_LINKS.map((link) => (

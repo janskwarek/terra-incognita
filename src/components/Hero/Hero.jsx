@@ -23,7 +23,6 @@ export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
 
-      {/* ── Background layer (parallax) ─────────── */}
       <div className={styles.bg} aria-hidden="true">
         {HERO_IMAGES.map((src, index) => (
           <img
@@ -41,7 +40,6 @@ export default function Hero() {
         <div className={`${styles.orb} ${styles.orb3}`} />
       </div>
 
-      {/* ── Content ─────────────────────────────── */}
       <div className={styles.content}>
         <p className={`${styles.preHeadline} hero-enter delay-1`}>
           ✦ &nbsp; Luxury Travel Agency &nbsp; ✦
@@ -60,14 +58,8 @@ export default function Hero() {
           <br />
           Najpiękniejsze miejsca na Ziemi, perfekcyjnie zaplanowane.
         </p>
-
-        <div className={`${styles.buttons} hero-enter delay-6`}>
-          <button className="btn btn-primary btn-lg">Odkryj wycieczki</button>
-          <button className="btn btn-outline btn-lg">Nasze destynacje</button>
-        </div>
       </div>
 
-      {/* ── Scroll indicator ────────────────────── */}
       <a href="#destinations" className={`${styles.scrollInd} hero-enter delay-7`} aria-label="Przewiń wdół">
         <svg viewBox="0 0 100 100" className={styles.circleText}>
           <defs>

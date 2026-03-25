@@ -1,7 +1,5 @@
-// ============================================
-// TERRA INCOGNITA — Content Data
-// Swap for API calls when backend is ready
-// ============================================
+// Terra Incognita — Content Data
+
 
 export const DESTINATIONS = [
   {
@@ -17,7 +15,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 4.9,
     reviews: 128,
-    image: '/images/santorini.png',
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sky: '#FFEAA7',
       horizon: '#E17055',
@@ -39,7 +37,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 5.0,
     reviews: 204,
-    image: '/images/kyoto.png',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sky: '#FFF0F3',
       bloom: '#FFB7C5',
@@ -61,7 +59,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 4.8,
     reviews: 97,
-    image: '/images/maldives.png',
+    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sky: '#87CEEB',
       shallow: '#26C6DA',
@@ -83,7 +81,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 4.9,
     reviews: 63,
-    image: '/images/patagonia.png',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sky: '#DFE9F3',
       glacier: '#A8D8EA',
@@ -105,7 +103,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 4.7,
     reviews: 175,
-    image: '/images/amalfi.png',
+    image: 'https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sun: '#FFFDE7',
       warm: '#FF6F00',
@@ -127,7 +125,7 @@ export const DESTINATIONS = [
     currency: 'PLN',
     rating: 4.9,
     reviews: 88,
-    image: '/images/machupicchu.png',
+    image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=1200&auto=format&fit=crop',
     colorScheme: {
       sky: '#E8F5E9',
       jungle: '#81C784',
