@@ -1,0 +1,152 @@
+/* BookingModal.module.css */
+/* Wraps the entire screen to block background interactions */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: flex-end; /* Pin to bottom to slide up */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Make it clickable only when open */
+.overlay.open {
+  pointer-events: all;
+}
+
+/* The dark background overlay */
+.overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.overlay.open::before {
+  opacity: 1;
+}
+
+/* The sliding curtain */
+.contentCurtain {
+  position: relative;
+  width: calc(100% - 32px);
+  max-width: 800px;
+  max-height: 90vh; /* Don't cover entire screen height */
+  margin: 0 auto;
+  background-color: var(--bg);
+  border-radius: 32px;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.9);
+  padding: 40px;
+  overflow-y: auto;
+  z-index: 2;
+  margin-bottom: 32px; /* Add margin-bottom for floating effect */
+  
+  /* Slide transform setup */
+  transform: translateY(110%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay.open .contentCurtain {
+  transform: translateY(-32px); /* Lift it bit above the bottom */
+}
+
+/* Typography & Layout inside curtain */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 5vw, 44px);
+  color: var(--cream);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.closeBtn {
+  color: var(--gold);
+  background: rgba(200, 169, 126, 0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: var(--gold);
+  color: var(--bg);
+  transform: rotate(90deg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.input, .select {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--cream);
+  border-radius: var(--radius-md);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--bg);
+}
+
+.input::placeholder {
+  color: var(--cream-muted);
+}
+
+.submit {
+  margin-top: 24px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .contentCurtain {
+    width: calc(100% - 24px);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .overlay.open .contentCurtain {
+    transform: translateY(-12px);
+  }
+}
