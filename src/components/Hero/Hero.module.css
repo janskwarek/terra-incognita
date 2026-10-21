@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100svh;
   min-height: 700px;
   display: flex;
   align-items: center;
@@ -187,10 +188,10 @@
 }
 
 .textPath {
-  font-size: 13px;
+  font-size: 10px;
   font-family: var(--font-sans);
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -210,4 +211,17 @@
 @keyframes floatArrow {
   0%, 100% { transform: translateY(-4px); }
   50% { transform: translateY(4px); }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .scrollInd {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: 72px;
+    height: 72px;
+  }
 }

@@ -19,10 +19,10 @@ export default function CTA({ onBook }) {
           </p>
         </div>
         <div className={styles.actions}>
-          <button className="btn btn-primary btn-lg" onClick={onBook}>
+          <button className={`btn btn-primary btn-lg ${styles.actionButton}`} onClick={onBook}>
             Zarezerwuj konsultację
           </button>
-          <button className="btn btn-outline btn-lg">
+          <button className={`btn btn-outline btn-lg ${styles.actionButton}`}>
             Pobierz katalog
           </button>
         </div>

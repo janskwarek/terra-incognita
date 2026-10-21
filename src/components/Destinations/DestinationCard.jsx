@@ -14,7 +14,7 @@ export default function DestinationCard({ dest }) {
         {dest.image ? (
           <img src={dest.image} alt={name} className={styles.img} />
         ) : (
-          <CssArt scheme={dest.colorScheme} id={dest.id} />
+          <CssArt scheme={dest.colorScheme} />
         )}
       </div>
 
@@ -45,7 +45,7 @@ export default function DestinationCard({ dest }) {
    photography. Each case returns a styled div that
    approximates the destination palette.
 ──────────────────────────────────────────────── */
-function CssArt({ id, scheme }) {
+function CssArt({ scheme }) {
   const style = {
     position: 'absolute',
     inset: 0,

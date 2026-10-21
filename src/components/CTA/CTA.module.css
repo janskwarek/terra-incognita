@@ -56,14 +56,31 @@
 
 @media (max-width: 768px) {
   .box {
-    padding: 52px 32px;
+    padding: clamp(32px, 9vw, 52px) clamp(20px, 7vw, 32px);
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .text {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .actions {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     min-width: 0;
+  }
+
+  .actionButton {
+    width: 100%;
+    min-width: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    white-space: normal;
+    line-height: 1.4;
+    text-align: center;
   }
 }

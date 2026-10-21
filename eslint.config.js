@@ -26,4 +26,20 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    files: ['backend/my-strapi-project/**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
+    files: [
+      'backend/my-strapi-project/config/**/*.js',
+      'backend/my-strapi-project/src/index.js',
+      'backend/my-strapi-project/src/admin/vite.config.example.js',
+    ],
+    languageOptions: {
+      sourceType: 'commonjs',
+    },
+  },
 ])

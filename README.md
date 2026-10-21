@@ -83,4 +83,4 @@ Aby uruchomić projekt lokalnie, wykonaj poniższe kroki:
 Projekt stworzony na własne potrzeby edukacyjne i prezentacyjne. Wszystkie zdjęcia pochodzą z serwisu Unsplash na licencji darmowej.
 
 ---
-Created with ❤️ by [janskwarek](https://github.com/janskwarek)
+Created  by [janskwarek](https://github.com/janskwarek)

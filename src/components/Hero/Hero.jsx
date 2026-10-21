@@ -42,7 +42,7 @@ export default function Hero() {
 
       <div className={styles.content}>
         <p className={`${styles.preHeadline} hero-enter delay-1`}>
-          ✦ &nbsp; Luxury Travel Agency &nbsp; ✦
+          ✦ &nbsp; Ekskluzywne podróże &nbsp; ✦
         </p>
 
         <h1 className={styles.heading}>
@@ -60,14 +60,14 @@ export default function Hero() {
         </p>
       </div>
 
-      <a href="#destinations" className={`${styles.scrollInd} hero-enter delay-7`} aria-label="Przewiń wdół">
+      <a href="#destinations" className={`${styles.scrollInd} hero-enter delay-7`} aria-label="Przewiń w dół do destynacji">
         <svg viewBox="0 0 100 100" className={styles.circleText}>
           <defs>
-            <path id="circlePath" d="M 50, 50 m -34, 0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0" />
+            <path id="circlePath" d="M 50, 50 m -41, 0 a 41,41 0 1,1 82,0 a 41,41 0 1,1 -82,0" />
           </defs>
           <text>
             <textPath href="#circlePath" className={styles.textPath}>
-              ODKRYWAJ ze mna swiat * odkrywaj * 
+              ODKRYWAJ ŚWIAT • ODKRYWAJ ŚWIAT •
             </textPath>
           </text>
         </svg>
